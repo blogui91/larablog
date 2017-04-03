@@ -1,0 +1,9 @@
+{
+  "/admin/js/app.js": "/admin/js/app.js",
+  "/libs/vendors.js": "/libs/vendors.js",
+  "/frontend/js/app.js": "/frontend/js/app.js",
+  "/mix.js": "/mix.js",
+  "/frontend/css/app.css": "/frontend/css/app.css",
+  "/admin/css/app.css": "/admin/css/app.css",
+  "/libs/manifest.js": "/libs/manifest.js"
+}
