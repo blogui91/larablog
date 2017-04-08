@@ -16,6 +16,8 @@ const {
 mix.sass('resources/assets/frontend/sass/app.scss', 'public/frontend/css/app.css');
 mix.sass('resources/assets/admin/sass/app.scss', 'public/admin/css/app.css');
 
+mix.copy('node_modules/materialize-css/dist/fonts', 'public/frontend/css/fonts');
+
 mix
 	.js('resources/assets/frontend/js/app.js', 'public/frontend/js') //Frontend
 	.js('resources/assets/admin/js/app.js', 'public/admin/js/app.js') //Admin

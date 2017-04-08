@@ -7,11 +7,13 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('admin/dist/css/main.css')}}"> --}}
+    <link href="{{ mix('frontend/css/app.css') }}" rel="stylesheet">
+
 
     <!-- Scripts -->
     <script>
@@ -21,8 +23,8 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+    <div id="app" >
+        {{-- <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -55,7 +57,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->first_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -76,12 +78,20 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+
+        @include('partials.navbar')
 
         @yield('content')
+
+
     </div>
+    @include('partials.footer')
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src="{{ mix('libs/manifest.js') }}"></script>
+    <script src="{{ mix('libs/vendors.js') }}"></script>
+    <script src="{{ mix('frontend/js/app.js') }}"></script>
 </body>
 </html>

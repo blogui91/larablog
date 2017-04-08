@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 
 /**
@@ -9,7 +8,8 @@ window._ = require('lodash');
 
 window.$ = window.jQuery = require('jquery');
 
-require('bootstrap-sass');
+require('./materialize/js/materialize');
+//require('./materialize/css/materialize.css');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -28,9 +28,23 @@ window.Vue = require('vue');
 window.axios = require('axios');
 
 window.axios.defaults.headers.common = {
-    'X-CSRF-TOKEN': window.Laravel.csrfToken,
-    'X-Requested-With': 'XMLHttpRequest'
+	'X-CSRF-TOKEN': window.Laravel.csrfToken,
+	'X-Requested-With': 'XMLHttpRequest'
 };
+
+
+setTimeout(function() {
+	if ($('[data-activates=slide-out]')
+		.length > 0) {
+		$('.button-collapse')
+			.sideNav({
+				menuWidth: 300, // Default is 300
+				edge: 'left', // Choose the horizontal origin
+				closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+				draggable: true // Choose whether you can drag to open on touch screens
+			});
+	}
+}, 500);
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

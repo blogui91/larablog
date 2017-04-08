@@ -1,4 +1,42 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+
+
+@section('page_header')
+    <h1>Blog</h1>
+@endsection
+
+@section('content')
+    <div class="page" id="welcome">
+        <div class="page-container">
+            <div class="row">
+                <div class="col s12 m6">
+                  <div class="card custom-card">
+                    <div class="card-image">
+                        <button class="favorite" type="button">
+                            <i class="material-icons">favorite</i>
+                        </button>
+                      <img src="http://lorempixel.com/400/200/sports/1/">
+                      <span class="card-title">Card Title</span>
+                      <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">share</i></a>
+                    </div>
+                    <div class="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+
+                      <br>
+                      <span> <i class="material-icons left">date_range</i>Publicado en 16/06/2017</span>
+                      <a href="" class="btn btn-flat right">Ir al post</a>
+
+                    </div>
+                  </div>
+                </div>
+                
+            </div>  
+        </div>
+    </div>
+@endsection
+
+
+{{-- <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
     <head>
         <meta charset="utf-8">
@@ -93,3 +131,4 @@
         </div>
     </body>
 </html>
+ --}}

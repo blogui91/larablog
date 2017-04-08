@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-
 Route::get('activation/{token}', 'Auth\RegisterController@activateUser')->name('user.activate');
 Route::get('{email}/resend-token', 'Auth\RegisterController@resendEmail')->name('user.resend');
 
